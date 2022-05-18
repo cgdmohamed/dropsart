@@ -19,8 +19,8 @@ get_header();
 						<div class="row align-items-center">
 							<div class="col-lg-7">
 								<div class="banner-content">
-									<h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">Expert IT training when and where you need it</h1>
-									<p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas architecto doloremque fugiat! Tempora, molestias minus mollitia optio laboriosam nulla, sed, numquam ad tempore</p>
+									<h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">دورة تصميم وصناعة العطور</h1>
+									<p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">من هو مصمم العطور ؟ وماهي الادوات التي يحتاجها مصمم العطور؟</p>
 		
 									<a href="courses.html" class="default-btn wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
 										المتجر
