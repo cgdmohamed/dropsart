@@ -69,6 +69,8 @@ get_header();
 		<!-- End Banner Area -->
 <?php
 
+get_template_part('template-parts/main/product-cat');
+get_template_part('template-parts/main/courses');
 the_content();
 
 get_footer();
