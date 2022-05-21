@@ -23,35 +23,6 @@ $(document).ready(function () {
       }
     });
 
-    // Partner Wrap JS
-    $(".partner-wrap").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 2,
-        },
-        576: {
-          items: 3,
-        },
-        768: {
-          items: 4,
-        },
-        992: {
-          items: 6,
-        },
-        1200: {
-          items: 6,
-        },
-      },
-    });
-
     // Feedback Wrap JS
     $(".feedback-slider").owlCarousel({
       loop: true,
@@ -63,97 +34,6 @@ $(document).ready(function () {
       smartSpeed: 1000,
       autoplayHoverPause: true,
       rtl: true,
-    });
-
-    // Discover Slider JS
-    $(".discover-slider").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 2,
-        },
-      },
-    });
-
-    // Courses Slider Two JS
-    $(".courses-slider-two").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-      },
-    });
-
-    // Courses Slider Three JS
-    $(".courses-slider-three").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      navText: [
-        "<i class='bx bx-left-arrow-alt'></i>",
-        "<i class='bx bx-right-arrow-alt'></i>",
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-      },
     });
 
     // Go To Top JS
@@ -183,46 +63,6 @@ $(document).ready(function () {
         $(".accordion-title").not($(this)).removeClass("active");
       });
 
-    // Count Time JS
-    function makeTimer() {
-      var endTime = new Date("november  30, 2021 17:00:00 PDT");
-      var endTime = Date.parse(endTime) / 1000;
-      var now = new Date();
-      var now = Date.parse(now) / 1000;
-      var timeLeft = endTime - now;
-      var days = Math.floor(timeLeft / 86400);
-      var hours = Math.floor((timeLeft - days * 86400) / 3600);
-      var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-      var seconds = Math.floor(
-        timeLeft - days * 86400 - hours * 3600 - minutes * 60
-      );
-      if (hours < "10") {
-        hours = "0" + hours;
-      }
-      if (minutes < "10") {
-        minutes = "0" + minutes;
-      }
-      if (seconds < "10") {
-        seconds = "0" + seconds;
-      }
-      $("#days").html(days + "<span>Days</span>");
-      $("#hours").html(hours + "<span>Hours</span>");
-      $("#minutes").html(minutes + "<span>Minutes</span>");
-      $("#seconds").html(seconds + "<span>Seconds</span>");
-    }
-    setInterval(function () {
-      makeTimer();
-    }, 300);
-
-    // Popup Video JS
-    $(".popup-youtube, .popup-vimeo").magnificPopup({
-      disableOn: 300,
-      type: "iframe",
-      mainClass: "mfp-fade",
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false,
-    });
 
     // Gallery Popup JS
     $(".gallery-popup").each(function () {

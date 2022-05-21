@@ -666,3 +666,18 @@ body {
   background-position: left center;
   background-size: 15%;
 }
+.cta{
+  background-color: #F4C760;
+}
+.cta a{
+  background-color: #000;
+  color: #fff;
+  border: unset;
+
+}
+.cta a:hover{
+  background-color: #000;
+}
+.cta p{
+  color: #000;
+}

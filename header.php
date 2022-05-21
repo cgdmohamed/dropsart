@@ -16,7 +16,7 @@ $theme_path = get_template_directory_uri();
     <div class="navbar-area navbar-area-two">
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
-            <a href="index.html" class="logo">
+            <a href="<?php echo esc_html(get_site_url()); ?>" class="logo">
                 <img src="<?php echo $theme_path; ?>/assets/img/logo.png" class="main-logo" alt="Logo">
                 <img src="<?php echo $theme_path; ?>/assets/img/logo-2.png" class="white-logo" alt="Logo">
             </a>
@@ -26,113 +26,55 @@ $theme_path = get_template_directory_uri();
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
                         <img src="<?php echo $theme_path; ?>/assets/img/logo.png" class="main-logo" alt="Logo">
                         <img src="<?php echo $theme_path; ?>/assets/img/logo-2.png" class="white-logo" alt="Logo">
                     </a>
 
-                    <div class="collapse navbar-collapse mean-menu">
-                        <ul class="navbar-nav m-auto">
+                    <div class="collapse navbar-collapse mean-menu d-flex justify-content-end">
+                        <ul class="navbar-nav ">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
-                                    Home
+                                <a href="<?php echo esc_html(get_site_url()); ?>" class="nav-link active">
+                                    الرئيسية
                                 </a>
 
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Courses
+                                    الدورات
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
 
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="courses.html" class="nav-link">Courses</a>
+                                        <a href="courses.html" class="nav-link">الدورات المسجلة</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="single-course.html" class="nav-link">Single Course</a>
+                                        <a href="single-course.html" class="nav-link">الدورات المباشرة</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Pages
+                                    عنا
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
 
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="about.html" class="nav-link">About</a>
+                                        <a href="instructors.html" class="nav-link">عن المدرب</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="feedback.html" class="nav-link">Feedback</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Events
-                                            <i class='bx bx-chevron-right'></i>
-                                        </a>
-
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="events.html" class="nav-link">Events</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="single-event.html" class="nav-link">Single Event</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="instructors.html" class="nav-link">Instructors</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            User
-                                            <i class='bx bx-chevron-right'></i>
-                                        </a>
-
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="my-account.html" class="nav-link">My Account</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="log-in.html" class="nav-link">Log In</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="registration.html" class="nav-link">Registration</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="recover-password.html" class="nav-link">Recover Password</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">Gallery</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="404.html" class="nav-link">404 Error Page</a>
+                                        <a href="about.html" class="nav-link">عن الشركة</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    المنتجات
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
 
@@ -157,7 +99,7 @@ $theme_path = get_template_directory_uri();
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Blog
+                                    المدونة
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
 
@@ -181,7 +123,7 @@ $theme_path = get_template_directory_uri();
                             </li>
 
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
+                                <a href="contact.html" class="nav-link">إتصل بنا</a>
                             </li>
                         </ul>
 
@@ -207,7 +149,7 @@ $theme_path = get_template_directory_uri();
 
                             <div class="register">
                                 <a href="my-account.html" class="default-btn">
-                                    Login / Register
+                                دخول / تسجيل
                                 </a>
                             </div>
                         </div>
@@ -255,7 +197,7 @@ $theme_path = get_template_directory_uri();
 
                             <div class="register">
                                 <a href="my-account.html" class="default-btn">
-                                    Login / Register
+                                    دخول / تسجيل
                                 </a>
                             </div>
                         </div>
