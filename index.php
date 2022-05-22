@@ -70,10 +70,66 @@ get_header();
 <?php
 
 get_template_part('template-parts/main/product-cat');
-get_template_part('template-parts/main/courses');
-//get_template_part('template-parts/main/feedbacks');    <-- todo
-get_template_part('template-parts/main/blog-posts');
+?>
+<section class="courses pt-10 pb-70">
+	<div class="container">
+		<div class="section-title">
+			<h2>الدورات التدريبية</h2>
+		</div>
+		<div class="row border rounded py-4 px-3 wow animate__animated animate__fadeInUp course-card">
+			<?php
+			$args = array(
+				'post_type' => 'courses',
+				'posts_per_page' => 3
+			);
+			$loop = new WP_Query($args);
+			if ($loop->have_posts()) {
+				while ($loop->have_posts()) : $loop->the_post();
+					get_template_part('template-parts/main/courses');
+				endwhile;
+			} else {
+				echo __('No courses yet');
+			}
+			wp_reset_postdata();
+
+
+			?>
+		</div>
+
+	</div>
+</section>
+<?php //get_template_part('template-parts/main/feedbacks');    <-- todo 
+?>
+<!-- Start News Area -->
+<section class="news-area-two pt-70 pb-70">
+	<div class="container">
+		<div class="section-title">
+			<h2>مقالات قد تعجبك</h2>
+		</div>
+		<div class="row">
+			<?php
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 3
+			);
+			$loop = new WP_Query($args);
+			if ($loop->have_posts()) {
+				while ($loop->have_posts()) : $loop->the_post();
+					get_template_part('template-parts/main/blog-posts');
+				endwhile;
+			} else {
+				echo __('No posts');
+			}
+			wp_reset_postdata();
+			?>
+		</div>
+		<div class="d-flex justify-content-center">
+			<a href="/blog" class="default-btn align-center">كل المقالات</a>
+		</div>
+	</div>
+</section>
+<!-- End News Area -->
+<?php
 get_template_part('template-parts/main/footer-cta');
-the_content();
 
 get_footer();

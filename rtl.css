@@ -681,3 +681,14 @@ body {
 .cta p{
   color: #000;
 }
+.news-area-two{
+  background-color: #F0F0F0;
+}
+.single-news a , .float {
+  color: #E99D69;
+}
+.post-categories > li > a{
+  background-color: #e99d6924;
+  border-radius: 4px;
+  padding: 3px;
+}

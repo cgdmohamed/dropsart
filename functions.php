@@ -104,3 +104,10 @@ function dropsart_scripts()
 
 }
 add_action('wp_enqueue_scripts', 'dropsart_scripts');
+
+
+function wpdocs_setup_theme() {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 550, 400, array('center','center') );
+}
+add_action( 'after_setup_theme', 'wpdocs_setup_theme' );
