@@ -12,7 +12,7 @@ $theme_path = get_template_directory_uri();
             <img src="<?php echo $theme_path; ?>/assets/img/section-title-shape.png" alt="Image">
         </div>
 
-        <div class="row categories">
+        <div class="row categories mx-1">
             <div class="col-sm mb-4">
                 <div class="rounded categories-pu p-5 p-x-sm-2">
                     <h2>
@@ -31,7 +31,7 @@ $theme_path = get_template_directory_uri();
             </div>
         </div>
 
-        <div class="row mt-1 categories">
+        <div class="row mt-1 categories mx-1">
             <div class="col-sm">
                 <div class="rounded categories-w p-5">
                     <h2>

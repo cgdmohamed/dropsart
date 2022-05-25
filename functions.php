@@ -111,3 +111,18 @@ function wpdocs_setup_theme() {
     set_post_thumbnail_size( 550, 400, array('center','center') );
 }
 add_action( 'after_setup_theme', 'wpdocs_setup_theme' );
+
+function dropsart_custom_logo_setup() {
+    $defaults = array(
+        'height'               => 49,
+        'width'                => 167,
+        'flex-height'          => true,
+        'flex-width'           => true,
+        'header-text'          => array( 'site-title', 'site-description' ),
+        'unlink-homepage-logo' => true, 
+    );
+ 
+    add_theme_support( 'custom-logo', $defaults );
+}
+ 
+add_action( 'after_setup_theme', 'dropsart_custom_logo_setup' );

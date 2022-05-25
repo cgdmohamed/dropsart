@@ -1,5 +1,7 @@
 <?php
 $theme_path = get_template_directory_uri();
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> dir="rtl">
@@ -17,8 +19,13 @@ $theme_path = get_template_directory_uri();
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
             <a href="<?php echo esc_html(get_site_url()); ?>" class="logo">
-                <img src="<?php echo $theme_path; ?>/assets/img/logo.png" class="main-logo" alt="Logo">
-                <img src="<?php echo $theme_path; ?>/assets/img/logo-2.png" class="white-logo" alt="Logo">
+                <?php 
+                if ( has_custom_logo() ) {
+                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                } else {
+                    echo '<h1>' . get_bloginfo('name') . '</h1>';
+                }
+                ?>
             </a>
         </div>
 
@@ -27,8 +34,13 @@ $theme_path = get_template_directory_uri();
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
                     <a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
-                        <img src="<?php echo $theme_path; ?>/assets/img/logo.png" class="main-logo" alt="Logo">
-                        <img src="<?php echo $theme_path; ?>/assets/img/logo-2.png" class="white-logo" alt="Logo">
+                        <?php 
+                        if ( has_custom_logo() ) {
+                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                        } else {
+                            echo '<h1>' . get_bloginfo('name') . '</h1>';
+                        }
+                        ?>
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu d-flex justify-content-end">

@@ -76,7 +76,7 @@ get_template_part('template-parts/main/product-cat');
 		<div class="section-title">
 			<h2>الدورات التدريبية</h2>
 		</div>
-		<div class="row border rounded py-4 px-3 wow animate__animated animate__fadeInUp course-card">
+		<div class="row border rounded py-4 px-3 wow animate__animated animate__fadeInUp course-card mx-1">
 			<?php
 			$args = array(
 				'post_type' => 'courses',
