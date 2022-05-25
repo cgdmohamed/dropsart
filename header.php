@@ -191,11 +191,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
                                 <div class="search-overlay search-popup">
                                     <div class='search-box'>
-                                        <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
-
-                                            <button class="search-button" type="submit"><i class="bx bx-search"></i></button>
-                                        </form>
+                                        <?php get_search_form(); ?>
                                     </div>
                                 </div>
                             </div>

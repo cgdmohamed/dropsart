@@ -706,6 +706,17 @@ body {
   background-position: left bottom;
   background-size: 11% 60%;
 }
+@media (min-width: 320px) and (max-width: 480px){
+  .categories-pu{
+    background-size: 26% 60%;
+  }
+  .categories-ud{
+    background-size: 35% 75%;
+  }
+  .categories-w{
+    background-size: 33% 60%;
+  }
+}
 .categories a {
   background-color: #fff;
   color: #000;
@@ -799,4 +810,15 @@ body {
 .soical-icons a {
   color: #000;
   margin-right: 15px;
+}
+.course-info i{
+  color: var(--main-color);
+}
+.course-users{
+  width: 25%;
+}
+@media (min-width: 320px) and (max-width: 480px){
+  .course-users{
+    width: 45%;
+  }
 }
