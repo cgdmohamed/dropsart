@@ -73,6 +73,8 @@ function dropsart_scripts()
     wp_enqueue_style('dropsart-dark', get_template_directory_uri() . "/assets/css/dark.css", array(), '1.0', 'all');
 
     wp_enqueue_style('dropsart-responsive', get_template_directory_uri() . "/assets/css/responsive.css", array(), '1.0', 'all');
+    
+    wp_enqueue_style('dropsart-swiper', get_template_directory_uri() . "/assets/css/swiper-bundle.min.css", array(), '8.1.6', 'all');
 
     wp_enqueue_style('dropsart-rtl', get_template_directory_uri() . "/assets/css/rtl.css", array(), '1.0', 'all');
 
@@ -99,6 +101,8 @@ function dropsart_scripts()
     wp_enqueue_script('dropsart-odometer', get_template_directory_uri() . '/assets/js/odometer.min.js', array(), '1.0', true);
 
     wp_enqueue_script('dropsart-ajaxchimp', get_template_directory_uri() . '/assets/js/ajaxchimp.min.js', array(), '1.0', true);
+
+    wp_enqueue_script('dropsart-swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '8.1.6', true);
 
     wp_enqueue_script('dropsart-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.1', true);
 

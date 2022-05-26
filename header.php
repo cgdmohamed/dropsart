@@ -1,7 +1,8 @@
 <?php
 $theme_path = get_template_directory_uri();
-$custom_logo_id = get_theme_mod( 'custom_logo' );
-$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+$custom_logo_id = get_theme_mod('custom_logo');
+$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+$user_id                   = get_current_user_id();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> dir="rtl">
@@ -19,9 +20,9 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
             <a href="<?php echo esc_html(get_site_url()); ?>" class="logo">
-                <?php 
-                if ( has_custom_logo() ) {
-                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                <?php
+                if (has_custom_logo()) {
+                    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
                 } else {
                     echo '<h1>' . get_bloginfo('name') . '</h1>';
                 }
@@ -34,9 +35,9 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
                     <a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
-                        <?php 
-                        if ( has_custom_logo() ) {
-                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                        <?php
+                        if (has_custom_logo()) {
+                            echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
                         } else {
                             echo '<h1>' . get_bloginfo('name') . '</h1>';
                         }
@@ -160,9 +161,16 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                             </div>
 
                             <div class="register">
-                                <a href="my-account.html" class="default-btn">
-                                دخول / تسجيل
-                                </a>
+                                <?php if (!is_user_logged_in()) {
+                                ?>
+                                    <a href="/dashboard" class="default-btn">
+                                        دخول / تسجيل
+                                    </a>
+                                <?php
+                                } else {
+                                    echo tutor_utils()->get_tutor_avatar($user_id, 'sm');
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- End Other Option -->
@@ -204,9 +212,17 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                             </div>
 
                             <div class="register">
-                                <a href="my-account.html" class="default-btn">
-                                    دخول / تسجيل
-                                </a>
+                                <?php if (!is_user_logged_in()) {
+                                ?>
+                                    <a href="/dashboard" class="default-btn">
+                                        دخول / تسجيل
+                                    </a>
+                                <?php
+                                } else {
+                                    echo tutor_utils()->get_tutor_avatar($user_id, 'sm');
+                                }
+                                ?>
+
                             </div>
                         </div>
                     </div>

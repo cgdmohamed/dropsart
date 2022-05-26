@@ -23,36 +23,8 @@ jQuery(document).ready(function ($) {
       }
     });
 
-    // Partner Wrap JS
-    $(".partner-wrap").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 2,
-        },
-        576: {
-          items: 3,
-        },
-        768: {
-          items: 4,
-        },
-        992: {
-          items: 6,
-        },
-        1200: {
-          items: 6,
-        },
-      },
-    });
-
     // Feedback Wrap JS
+    /*
     $(".feedback-slider").owlCarousel({
       loop: true,
       margin: 30,
@@ -63,98 +35,7 @@ jQuery(document).ready(function ($) {
       smartSpeed: 1000,
       autoplayHoverPause: true,
       rtl: true,
-    });
-
-    // Discover Slider JS
-    $(".discover-slider").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 2,
-        },
-      },
-    });
-
-    // Courses Slider Two JS
-    $(".courses-slider-two").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-      },
-    });
-
-    // Courses Slider Three JS
-    $(".courses-slider-three").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-      navText: [
-        "<i class='bx bx-left-arrow-alt'></i>",
-        "<i class='bx bx-right-arrow-alt'></i>",
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-        1200: {
-          items: 3,
-        },
-      },
-    });
+    });*/
 
     // Go To Top JS
     // Scroll Event
@@ -317,11 +198,6 @@ jQuery(document).ready(function ($) {
       });
     });
 
-    // Newsletter Modal JS
-    $(document).ready(function () {
-      $("#exampleModal").modal("show");
-    });
-
     // Odometer JS
     $(".odometer").appear(function (e) {
       var odo = $(".odometer");
@@ -440,6 +316,10 @@ jQuery(document).ready(function ($) {
       bigimage.data("owl.carousel").to(number, 300, true);
     });
 
+    // Switch Btn
+    $("body").append(
+      "<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>"
+    );
   })(jQuery);
 
   // function to set a given theme/color-scheme
@@ -465,4 +345,33 @@ jQuery(document).ready(function ($) {
       document.getElementById("slider").checked = true;
     }
   })();
+});
+
+jQuery(document).ready(function ($) {
+  // Feedback Wrap JS
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    //direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 60,
+    loop: true,  
+    centeredSlides: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '<i class="bx bx-right-arrow-alt" ></i>',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  
 });

@@ -822,3 +822,22 @@ body {
     width: 45%;
   }
 }
+.switch-box{
+  display: none;
+}
+.owl-stage-outer{
+  position:relative;
+  overflow:hidden;
+  -webkit-transform:translate3d(0,0,0) !important;
+  direction: ltr;
+  }
+  .feedback-area{
+    background-color: #F5F6FA;
+  }
+  .feedback{
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    color: var(--body-color) ;
+  }
