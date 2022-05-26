@@ -6,6 +6,7 @@
 
 //performance
 require_once get_template_directory() . '/inc/class-preformance.php';
+require_once get_template_directory() . '/inc/class-breadcrumbs.php';
 
 function dropsart_theme_support()
 {

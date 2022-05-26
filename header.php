@@ -161,6 +161,7 @@ $user_id                   = get_current_user_id();
                             </div>
 
                             <div class="register">
+                            <a href="<?php echo get_site_url() ?>/dashboard">
                                 <?php if (!is_user_logged_in()) {
                                 ?>
                                     <a href="/dashboard" class="default-btn">
@@ -171,6 +172,7 @@ $user_id                   = get_current_user_id();
                                     echo tutor_utils()->get_tutor_avatar($user_id, 'sm');
                                 }
                                 ?>
+                            </a>
                             </div>
                         </div>
                         <!-- End Other Option -->
@@ -212,6 +214,7 @@ $user_id                   = get_current_user_id();
                             </div>
 
                             <div class="register">
+                            <a href="/dashboard">
                                 <?php if (!is_user_logged_in()) {
                                 ?>
                                     <a href="/dashboard" class="default-btn">
@@ -222,7 +225,7 @@ $user_id                   = get_current_user_id();
                                     echo tutor_utils()->get_tutor_avatar($user_id, 'sm');
                                 }
                                 ?>
-
+                            </a>
                             </div>
                         </div>
                     </div>

@@ -15,6 +15,7 @@ jQuery(document).ready(function ($) {
     $("select").niceSelect();
 
     // Header Sticky JS
+    
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 150) {
         $(".navbar-area").addClass("is-sticky");

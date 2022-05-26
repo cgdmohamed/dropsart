@@ -69,7 +69,9 @@ $footer_links = array(
 
 do_action('tutor_dashboard/before/wrap');
 ?>
+<div class="pt-100">
 
+</div>
 <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student tutor-pb-80">
 	<div class="tutor-container">
 		<div class="tutor-row tutor-d-flex tutor-justify-between tutor-frontend-dashboard-header">

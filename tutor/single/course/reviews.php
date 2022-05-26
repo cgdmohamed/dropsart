@@ -53,7 +53,7 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 				<div class="tutor-row tutor-gx-xl-5 tutor-align-center">
 					<div class="tutor-col-lg-auto tutor-text-center tutor-mb-16 tutor-mb-lg-0">
 						<div class="tutor-review-summary-average-rating tutor-mb-20">
-							<?php echo number_format( $rating->rating_avg, 1 ); ?>
+							<?php echo number_format( $rating->rating_avg, 1 ) . '/5'; ?>
 						</div>
 
 						<div>

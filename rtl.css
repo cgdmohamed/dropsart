@@ -706,14 +706,14 @@ body {
   background-position: left bottom;
   background-size: 11% 60%;
 }
-@media (min-width: 320px) and (max-width: 480px){
-  .categories-pu{
+@media (min-width: 320px) and (max-width: 480px) {
+  .categories-pu {
     background-size: 26% 60%;
   }
-  .categories-ud{
+  .categories-ud {
     background-size: 35% 75%;
   }
-  .categories-w{
+  .categories-w {
     background-size: 33% 60%;
   }
 }
@@ -811,33 +811,79 @@ body {
   color: #000;
   margin-right: 15px;
 }
-.course-info i{
+.course-info i {
   color: var(--main-color);
 }
-.course-users{
+.course-users {
   width: 25%;
 }
-@media (min-width: 320px) and (max-width: 480px){
-  .course-users{
+@media (min-width: 320px) and (max-width: 480px) {
+  .course-users {
     width: 45%;
   }
 }
-.switch-box{
+.switch-box {
   display: none;
 }
-.owl-stage-outer{
-  position:relative;
-  overflow:hidden;
-  -webkit-transform:translate3d(0,0,0) !important;
+.owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0) !important;
   direction: ltr;
-  }
-  .feedback-area{
-    background-color: #F5F6FA;
-  }
-  .feedback{
-    max-width: 85%;
-    margin: 0 auto;
-  }
-  .swiper-button-prev, .swiper-button-next{
-    color: var(--body-color) ;
-  }
+}
+.feedback-area {
+  background-color: #f5f6fa;
+}
+.feedback {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--body-color);
+}
+/*********/
+/* tutor */
+table.tutor-table thead th > *,
+table.tutor-table thead th * > * {
+  float: right;
+}
+.custom-rating {
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.total-custom-rating {
+  color: var(--main-color);
+}
+.breadcrumbs {
+  width: fit-content;
+  background-color: #efefef;
+}
+.breadcrumbs a {
+  color: var(--main-color);
+}
+.tutor-ratings-stars {
+  display: flex;
+}
+.tutor-ratings {
+  align-items: unset;
+}
+.tutor-input-group>:not(.tutor-form-wrap):not(:last-child){
+  border-top-right-radius:6px !important;
+  border-bottom-right-radius:6px !important;
+  border-top-left-radius:0 !important;
+  border-bottom-left-radius:0 !important;
+}
+.tutor-input-group>:not(.tutor-form-wrap):not(:first-child){
+  border-top-right-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+  border-top-left-radius:6px !important;
+  border-bottom-left-radius:6px !important;
+}
+.tutor-form-field-course-categories > .nice-select{
+  float: unset !important;
+}
+.tutor-form-check input.tutor-form-check-input{
+  margin-right: unset !important;
+  margin-left: 8px;
+}

@@ -17,15 +17,21 @@ $course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()
 tutor_utils()->tutor_custom_header();
 do_action('tutor_course/single/before/wrap');
 ?>
+<div class="pt-100">
+
+</div>
+
 <div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent'); ?>>
+
     <div class="tutor-course-details-page tutor-container">
+    <div class="breadcrumbs rounded px-3 pt-2 pb-0.5 mb-1"><?php custom_breadcrumbs(); ?></div>
         <?php (isset($is_enrolled) && $is_enrolled) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
         <div class="tutor-row tutor-gx-xl-5">
             <main class="tutor-col-xl-8">
                 <?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
 	            <?php do_action('tutor_course/single/before/inner-wrap'); ?>
                 <div class="tutor-course-details-tab tutor-mt-32">
-                    <div class="tutor-is-sticky">
+                    <div class="">
                         <?php tutor_load_template( 'single.course.enrolled.nav', array('course_nav_item' => $course_nav_item ) ); ?>
                     </div>
                     <div class="tutor-tab tutor-pt-24">
@@ -47,9 +53,32 @@ do_action('tutor_course/single/before/wrap');
                                 ?>
                             </div>
                         <?php endforeach; ?>
+                        <div class="tutor-pt-24">
+                <?php foreach( $course_nav_item as $key => $subpage ) : ?>
+                            <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'curriculum' ? ' is-active' : ''; ?>">
+                                <?php
+                                    do_action( 'tutor_course/single/tab/'.$key.'/before' );
+                                    
+                                    $method = $subpage['method'];
+                                    if ( is_string($method) ) {
+                                        $method();
+                                    } else {
+                                        $_object = $method[0];
+                                        $_method = $method[1];
+                                        $_object->$_method(get_the_ID());
+                                    }
+
+                                    do_action( 'tutor_course/single/tab/'.$key.'/after' );
+                                ?>
+                            </div>
+                        <?php endforeach; ?>
+                </div>
+                        
                     </div>
+                    
                 </div>
 	            <?php do_action('tutor_course/single/after/inner-wrap'); ?>
+
             </main>
 
             <aside class="tutor-col-xl-4">
@@ -69,4 +98,5 @@ do_action('tutor_course/single/before/wrap');
 <?php do_action('tutor_course/single/after/wrap'); ?>
 
 <?php
+get_template_part('template-parts/main/footer-cta');
 tutor_utils()->tutor_custom_footer();
