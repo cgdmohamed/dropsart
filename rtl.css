@@ -868,22 +868,35 @@ table.tutor-table thead th * > * {
 .tutor-ratings {
   align-items: unset;
 }
-.tutor-input-group>:not(.tutor-form-wrap):not(:last-child){
-  border-top-right-radius:6px !important;
-  border-bottom-right-radius:6px !important;
-  border-top-left-radius:0 !important;
-  border-bottom-left-radius:0 !important;
+.tutor-input-group > :not(.tutor-form-wrap):not(:last-child) {
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
-.tutor-input-group>:not(.tutor-form-wrap):not(:first-child){
-  border-top-right-radius:0 !important;
-  border-bottom-right-radius:0 !important;
-  border-top-left-radius:6px !important;
-  border-bottom-left-radius:6px !important;
+.tutor-input-group > :not(.tutor-form-wrap):not(:first-child) {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
 }
-.tutor-form-field-course-categories > .nice-select{
+.tutor-form-field-course-categories > .nice-select,
+.tutor-video-upload-wrap > .nice-select {
   float: unset !important;
+  text-align: unset !important;
 }
-.tutor-form-check input.tutor-form-check-input{
+.tutor-form-check input.tutor-form-check-input {
   margin-right: unset !important;
   margin-left: 8px;
+}
+.tutor-accordion-item-header::after{
+  right: unset !important;
+  transform: translateY(-50%) rotate(180deg);
+}
+.tutor-form-toggle input ~ .tutor-form-toggle-control::before{
+  left: unset !important;
+  right: 4px;
+}
+.tutor-form-toggle input:checked ~ .tutor-form-toggle-control::before{
+  right: 18px !important;
 }

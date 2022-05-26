@@ -53,7 +53,7 @@ do_action('tutor_course/single/before/wrap');
                                 ?>
                             </div>
                         <?php endforeach; ?>
-                        <div class="tutor-pt-24">
+                        <div class="tutor-pt-24 tutor-pb-24">
                 <?php foreach( $course_nav_item as $key => $subpage ) : ?>
                             <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'curriculum' ? ' is-active' : ''; ?>">
                                 <?php
