@@ -51,7 +51,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 							'product'   => $product,
 						)
 					);
-					echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__('Clear', 'woocommerce') . '</a><a href="https://wa.me/" class="more-sizes"><i class="bx bxl-whatsapp"></i> للكميات الأكبر</a>')) : '';
+					echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__('Clear', 'woocommerce') . '</a><a href="https://wa.me/message/OZG75IAHC3YNH1" class="more-sizes"><i class="bx bxl-whatsapp"></i> للكميات الأكبر</a>')) : '';
 					?>		
 
 				</div>

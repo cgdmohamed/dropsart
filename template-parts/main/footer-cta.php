@@ -21,7 +21,7 @@
 
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="d-flex justify-content-md-end justify-content-sm-center">
-                    <a href="#" class="default-btn ">طلب استشارة</a>
+                    <a href="/consultations" class="default-btn ">طلب استشارة</a>
                 </div>
 
             </div>

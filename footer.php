@@ -18,22 +18,22 @@ get_template_part('template-parts/main/footer-cta');
 					</h3>
 					<ul class="link">
 						<li>
-							<a href="courses.html">الرئيسية</a>
+							<a href="<?php echo esc_url(site_url()); ?>">الرئيسية</a>
 						</li>
 						<li>
-							<a href="about.html">المنتجات</a>
+							<a href="/shop">المنتجات</a>
 						</li>
 						<li>
-							<a href="faq.html">عنا</a>
+							<a href="/about-us">عنا</a>
 						</li>
 						<li>
-							<a href="terms-conditions.html">تواصل معنا</a>
+							<a href="/contact">تواصل معنا</a>
 						</li>
 						<li>
-							<a href="privacy-policy.html">المدونة</a>
+							<a href="/blog">المدونة</a>
 						</li>
 						<li>
-							<a href="privacy-policy.html">حجز موعد استشارة</a>
+							<a href="/consultations">حجز موعد استشارة</a>
 						</li>
 					</ul>
 				</div>
@@ -46,13 +46,13 @@ get_template_part('template-parts/main/footer-cta');
 					</h3>
 					<ul class="link">
 						<li>
-							<a href="courses.html">العطور</a>
+							<a href="/product-categoires/perfumes">العطور</a>
 						</li>
 						<li>
-							<a href="about.html">ادهان العود</a>
+							<a href="/product-category/fragrances">ادهان العود</a>
 						</li>
 						<li>
-							<a href="faq.html">طقم الإستكشاف</a>
+							<a href="/discovery-box">طقم الإستكشاف</a>
 						</li>
 					</ul>
 				</div>
@@ -65,28 +65,26 @@ get_template_part('template-parts/main/footer-cta');
 					</h3>
 					<ul class="link">
 						<li>
-							<a href="courses.html">دوراتي</a>
+							<a href="/dashboard/my-courses">دوراتي</a>
 						</li>
 						<li>
-							<a href="about.html">الطلبات</a>
+							<a href="/cart">سلة التسوق</a>
 						</li>
 						<li>
-							<a href="faq.html">سلة التسوق</a>
+							<a href="/checkout">دفع الطلب</a>
 						</li>
 						<li>
-							<a href="faq.html">دفع الطلب</a>
-						</li>
-						<li>
-							<a href="faq.html">حسابي</a>
+							<a href="/dashboard">حسابي</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-sm-6">
-				<img src="<?php echo $theme_path; ?>/assets/img/ipf-logo.png" alt="IPF Logo">
+			<div class="col-lg-3 col-sm-6 text-center">
+				<img src="<?php echo $theme_path; ?>/assets/img/tpf.jpg" alt="IPF Logo">
+				<img src="<?php echo $theme_path; ?>/assets/img/new-luxury.png" alt="IPF Logo2">
 				<div class="d-flex justify-content-center ipf-btn">
-					<a href="#" nofollow class="default-btn mt-5">مزيد عن IPF</a>
+					<a href="https://www.perfumefoundation.org/index.html" nofollow class="default-btn mt-5">مزيد عن IPF</a>
 				</div>
 			</div>
 		</div>
@@ -106,9 +104,9 @@ get_template_part('template-parts/main/footer-cta');
 			<div class="col-md-6 col-sm-12">
 				<div class="d-flex justify-content-md-end justify-content-sm-center">
 					<ul class="soical-icons">
-						<li><a href="https://wa.me/+965"><i class='bx bxl-whatsapp'></i></a></li>
-						<li><a href="mailto:mail.com"><i class='bx bxs-envelope'></i></a></li>
-						<li><a href="https://instagram.com/"><i class='bx bxl-instagram'></i></a></li>
+						<li><a href="https://wa.me/message/OZG75IAHC3YNH1"><i class='bx bxl-whatsapp'></i></a></li>
+						<li><a href="mailto:info@dropsart.com"><i class='bx bxs-envelope'></i></a></li>
+						<li><a href="https://instagram.com/dropsart.kw?r=nametag"><i class='bx bxl-instagram'></i></a></li>
 					</ul>
 				</div>
 			</div>

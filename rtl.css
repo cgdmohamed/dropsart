@@ -717,12 +717,12 @@ body {
     background-size: 33% 60%;
   }
 }
-.categories a {
+.categories a, .req-btn {
   background-color: #fff;
   color: #000;
   border: unset;
 }
-.categories a:hover {
+.categories a:hover, .req-btn:hover {
   background-color: #fff;
   color: #000;
   border: unset;
@@ -1120,4 +1120,19 @@ div.woocommerce form .form-row textarea:focus {
 }
 .woocommerce-product-gallery__wrapper div{
   padding: 5px;
+}
+/* discovery box */
+.discovery-box{
+  background-color: #f4c760;
+}
+.discovery-box p{
+  color: var(--heading-color);
+}
+.user{
+  font-size: 2em;
+}
+@media only screen and (max-width: 991px){
+  .mobile-nav .logo {
+    top: 11.5px;
+  }
 }

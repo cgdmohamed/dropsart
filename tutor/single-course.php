@@ -17,11 +17,8 @@ $course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()
 tutor_utils()->tutor_custom_header();
 do_action('tutor_course/single/before/wrap');
 ?>
-<div class="pt-100">
 
-</div>
-
-<div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent'); ?>>
+<div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent pt-5'); ?>>
 
     <div class="tutor-course-details-page tutor-container">
     <div class="breadcrumbs rounded px-3 pt-2 pb-0.5 mb-1"><?php custom_breadcrumbs(); ?></div>
@@ -98,5 +95,4 @@ do_action('tutor_course/single/before/wrap');
 <?php do_action('tutor_course/single/after/wrap'); ?>
 
 <?php
-get_template_part('template-parts/main/footer-cta');
 tutor_utils()->tutor_custom_footer();

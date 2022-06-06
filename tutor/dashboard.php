@@ -69,7 +69,7 @@ $footer_links = array(
 
 do_action('tutor_dashboard/before/wrap');
 ?>
-<div class="pt-100">
+<div class="pt-50">
 
 </div>
 <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student tutor-pb-80">

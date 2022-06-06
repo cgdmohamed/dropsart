@@ -26,8 +26,8 @@ $login_url = tutor_utils()->get_option('enable_tutor_native_login', null, true, 
 ?>
 
 <?php do_action('tutor/template/login/before/wrap'); ?>
-<div class="container pt-100">
-<div class="row pt-100">
+<div class="container pt-50">
+<div class="row pt-50">
 <div <?php tutor_post_class('tutor-page-wrap'); ?>>
     <div class="tutor-template-segment tutor-login-wrap">
         <div class="tutor-login-form-wrapper">

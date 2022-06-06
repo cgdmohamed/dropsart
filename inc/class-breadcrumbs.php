@@ -82,7 +82,7 @@ function custom_breadcrumbs()
 
             // If it's a custom post type within a custom taxonomy
             $taxonomy_exists = taxonomy_exists($custom_taxonomy);
-            if (empty($last_category) && !empty($custom_taxonomy) && $taxonomy_exists) {
+            if (is_array(empty($last_category)) && !empty($custom_taxonomy) && $taxonomy_exists) {
 
                 $taxonomy_terms = get_the_terms($post->ID, $custom_taxonomy);
                 $cat_id         = $taxonomy_terms[0]->term_id;
