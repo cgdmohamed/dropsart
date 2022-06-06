@@ -5,6 +5,7 @@
  * Client: DropsArt
  */
 $theme_path = get_template_directory_uri();
+get_template_part('template-parts/main/footer-cta');
 ?>
 <!-- Start Footer Top Area -->
 <footer class="dropsart-footer pt-100 pb-70 px-3">

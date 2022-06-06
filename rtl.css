@@ -1080,7 +1080,44 @@ div.woocommerce form .form-row input[type="tel"]:focus,
 div.woocommerce form .form-row input[type="text"]:focus,
 div.woocommerce form .form-row input[type="url"]:focus,
 div.woocommerce form .form-row select:focus,
-div.woocommerce form .form-row textarea:focus{
+div.woocommerce form .form-row textarea:focus {
   outline: 2px solid #da627d;
   outline-offset: unset;
+}
+.variations :nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.more-sizes {
+  background-color: #25d366;
+  padding: 9px 25px 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+.more-sizes:hover {
+  color: #fff;
+}
+.posted_in a {
+  padding: 6px 12px 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  color: var(--main-color);
+}
+.product_meta {
+  margin-top: 0.5rem;
+}
+.reset_variations {
+  margin: 5px 10px;
+}
+.woocommerce-product-gallery ol{
+  list-style: none;
+  padding-right: unset;
+  display: flex;
+  padding-left: 0;
+}
+.woocommerce-product-gallery li{
+  padding: 5px;
+}
+.woocommerce-product-gallery__wrapper div{
+  padding: 5px;
 }

@@ -170,7 +170,6 @@ if (is_front_page()) {
 	</section>
 	<!-- End News Area -->
 <?php
-	get_template_part('template-parts/main/footer-cta');
 } else {
 	get_template_part('template-parts/content-none');
 }

@@ -108,7 +108,6 @@ do_action('woocommerce_before_main_content');
 					 * @hooked woocommerce_get_sidebar - 10
 					 */
 					//do_action( 'woocommerce_sidebar' );
-					get_template_part('template-parts/main/footer-cta');
 					get_footer('shop');
 					?>
 

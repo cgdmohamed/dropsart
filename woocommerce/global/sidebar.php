@@ -20,6 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //get_sidebar( 'shop' );
-get_template_part('template-parts/main/footer-cta');
+
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
