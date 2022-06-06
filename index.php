@@ -11,10 +11,10 @@
  */
 $theme_path = get_template_directory_uri();
 get_header();
+
 if (is_front_page()) {
-
-
 ?>
+
 	<!-- Start Banner Area -->
 	<section class="banner-area-two">
 		<div class="d-table">
@@ -37,6 +37,7 @@ if (is_front_page()) {
 
 						<div class="col-lg-5">
 							<div class="banner-img wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+								
 								<!-- here to add item -->
 								<div class="banner-shape-1">
 									<img src="<?php echo $theme_path; ?>/assets/img/banner-img/shape-img-1.png" alt="Image">
@@ -79,25 +80,24 @@ if (is_front_page()) {
 			<div class="section-title">
 				<h2>الدورات التدريبية</h2>
 			</div>
-			<div class="row border rounded py-4 px-3 wow animate__animated animate__fadeInUp course-card mx-1">
-				<?php
-				$args = array(
-					'post_type' => 'courses',
-					'posts_per_page' => 3
-				);
-				$loop = new WP_Query($args);
-				if ($loop->have_posts()) {
-					while ($loop->have_posts()) : $loop->the_post();
-						get_template_part('template-parts/main/courses');
-					endwhile;
-				} else {
-					echo __('No courses yet');
-				}
-				wp_reset_postdata();
+
+			<?php
+			$args = array(
+				'post_type' => 'courses',
+				'posts_per_page' => 3
+			);
+			$loop = new WP_Query($args);
+			if ($loop->have_posts()) {
+				while ($loop->have_posts()) : $loop->the_post();
+					get_template_part('template-parts/main/courses');
+				endwhile;
+			} else {
+				echo __('No courses yet');
+			}
+			wp_reset_postdata();
 
 
-				?>
-			</div>
+			?>
 
 		</div>
 	</section>
@@ -111,7 +111,23 @@ if (is_front_page()) {
 				</div>
 				<img src="<?php echo $theme_path; ?>/assets/img/section-title-shape.png" alt="Image">
 			</div>
-			<?php get_template_part('template-parts/main/feedbacks');
+
+			<?php
+			$args = array(
+				'post_type' => 'testimonials',
+				'posts_per_page' => 3
+			);
+			$loop = new WP_Query($args);
+			if ($loop->have_posts()) {
+				while ($loop->have_posts()) : $loop->the_post();
+				get_template_part('template-parts/main/feedbacks');
+				endwhile;
+			} else {
+				echo __('لم يتم اضافة اراء');
+			}
+			wp_reset_postdata();
+			
+			
 			?>
 
 		</div>

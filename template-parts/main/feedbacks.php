@@ -15,9 +15,9 @@
         <!-- Slides -->
         <div class="swiper-slide">
             <div class="feedback">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p class="text-center"><?php echo esc_html(get_the_content()); ?></p>
                 <div class="feedback-title">
-                    <h3>Jessica Molony</h3>
+                    <h3 class="text-center"><?php echo esc_html( get_post_meta( get_the_ID(), 'author', true ) ); ?></h3>
                 </div>
             </div>
         </div>

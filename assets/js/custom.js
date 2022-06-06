@@ -15,14 +15,14 @@ jQuery(document).ready(function ($) {
     $("select").niceSelect();
 
     // Header Sticky JS
-    
+    /*
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 150) {
         $(".navbar-area").addClass("is-sticky");
       } else {
         $(".navbar-area").removeClass("is-sticky");
       }
-    });
+    });*/
 
     // Feedback Wrap JS
     /*
@@ -376,3 +376,11 @@ jQuery(document).ready(function ($) {
   });
   
 });
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

@@ -7,6 +7,7 @@
 //performance
 require_once get_template_directory() . '/inc/class-preformance.php';
 require_once get_template_directory() . '/inc/class-breadcrumbs.php';
+require_once get_template_directory() . '/inc/class-testmonials.php';
 
 function dropsart_theme_support()
 {
@@ -131,3 +132,54 @@ function dropsart_custom_logo_setup() {
 }
  
 add_action( 'after_setup_theme', 'dropsart_custom_logo_setup' );
+
+
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+//add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+//add_theme_support( 'wc-product-gallery-slider' );
+
+add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+function jk_dequeue_styles( $enqueue_styles ) {
+	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	//unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	//unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	return $enqueue_styles;
+}
+
+add_filter( 'woocommerce_product_description_heading', '__return_null' );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+function woocommerce_template_single_excerpt() {
+        return;
+}
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 31 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_before_add_to_cart_form', 'woocommerce_template_single_meta', 40 );
+/*
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
+
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+*/
+
+add_filter( 'woocommerce_checkout_fields' , 'bbloomer_remove_billing_postcode_checkout' );
+ 
+function bbloomer_remove_billing_postcode_checkout( $fields ) {
+  unset($fields['billing']['billing_postcode']);
+  return $fields;
+}

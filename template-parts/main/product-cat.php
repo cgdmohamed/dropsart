@@ -18,7 +18,7 @@ $theme_path = get_template_directory_uri();
                     <h2>
                         العطور
                     </h2>
-                    <a href="#" class="default-btn">عرض</a>
+                    <a href="/product-category/perfumes" class="default-btn">عرض</a>
                 </div>
             </div>
             <div class="col-sm mb-4">
@@ -26,7 +26,7 @@ $theme_path = get_template_directory_uri();
                     <h2>
                         ادهان العود
                     </h2>
-                    <a href="#" class="default-btn">عرض</a>
+                    <a href="/product-category/oud" class="default-btn">عرض</a>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ $theme_path = get_template_directory_uri();
                     <h2>
                         طقم الإستكشاف
                     </h2>
-                    <a href="#" class="default-btn">عرض</a>
+                    <a href="/discovery-box" class="default-btn">عرض</a>
                 </div>
             </div>
         </div>
