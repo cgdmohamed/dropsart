@@ -65,7 +65,7 @@ get_template_part('template-parts/main/footer-cta');
 					</h3>
 					<ul class="link">
 						<li>
-							<a href="/dashboard/my-courses">دوراتي</a>
+							<a href="/dashboard/enrolled-courses">دوراتي</a>
 						</li>
 						<li>
 							<a href="/cart">سلة التسوق</a>

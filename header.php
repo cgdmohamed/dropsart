@@ -66,17 +66,17 @@ $user_id                   = get_current_user_id();
 								</li>
 
 								<li class="nav-item">
-									<a href="#" class="nav-link">
+									<a href="/shop" class="nav-link">
 										المنتجات
 										<i class="bx bx-chevron-down"></i>
 									</a>
 
 									<ul class="dropdown-menu">
 										<li class="nav-item">
-											<a href="/product-categoires/perfumes" class="nav-link">العطور</a>
+											<a href="/product-category/perfumes" class="nav-link">العطور</a>
 										</li>
 										<li class="nav-item">
-											<a href="/product-categories/fragrances" class="nav-link">ادهان العود</a>
+											<a href="/product-category/fragrances" class="nav-link">ادهان العود</a>
 										</li>
 										<li class="nav-item">
 											<a href="/discovery-box" class="nav-link">طقم الإستكشاف</a>
@@ -109,14 +109,14 @@ $user_id                   = get_current_user_id();
 											<?php get_search_form(); ?>
 										</div>
 									</div>
-								</div>
-
-								<div class="register">
-										<a href="/dashboard" class="user">
-											<i class='bx bxs-user-circle'></i>
-										</a>
-								</div>
+				</div>
 							</div>
+							<div class="user-login">
+									<a href="/dashboard" class="user">
+										<i class='bx bxs-user-circle'></i>
+									</a>
+
+								</div>
 							<!-- End Other Option -->
 						</div>
 						<a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
@@ -136,10 +136,10 @@ $user_id                   = get_current_user_id();
 			<div class="others-option-for-responsive">
 				<div class="container">
 					<div class="dot-menu">
-					<a href="/dashboard" class="user">
+						<a href="/dashboard" class="user">
 
-<i class="bx bxs-user-circle"></i>
-</a>
+							<i class="bx bxs-user-circle"></i>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -26,11 +26,11 @@ if (is_front_page()) {
 								<h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">دورة تصميم وصناعة العطور</h1>
 								<p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">من هو مصمم العطور ؟ وماهي الادوات التي يحتاجها مصمم العطور؟</p>
 
-								<a href="courses.html" class="default-btn wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
+								<a href="/shop" class="default-btn wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
 									المتجر
 								</a>
-								<a href="courses.html" class="default-btn alt-btn mr-2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
-									الدورات
+								<a href="/blog" class="default-btn alt-btn mr-2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
+									المدونة
 								</a>
 							</div>
 						</div>
