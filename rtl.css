@@ -689,22 +689,25 @@ body {
   background-color: var(--main-color);
   background-image: url(../dropsart/assets/img/cats/perfume-w.svg);
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 20% 60%;
+  background-position: left;
+  background-size: 25% 60%;
 }
 .categories-ud {
   background-color: #e99d69;
   background-image: url(../dropsart/assets/img/cats/fragrance_w.svg);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left;
   background-size: 15% 65%;
 }
 .categories-w {
   background-color: #f4c760;
   background-image: url(../dropsart/assets/img/cats/gift-box-w.svg);
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 10% 65%;
+  background-position: left;
+  background-size: 15% 65%;
+}
+.affordable-area h2{
+	font-size:2rem;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .categories-pu {
@@ -1006,6 +1009,7 @@ table.tutor-table thead th * > * {
   background-color: #da627d;
   padding-left: 1em;
   padding-right: 1em;
+  position:relative;
 }
 .coupon {
   display: flex;
@@ -1145,4 +1149,52 @@ div.woocommerce form .form-row textarea:focus {
   text-align: center;
   border-radius: 50%;
   color: var(--white-color);
+}
+@media only screen and (max-width: 767px){
+	.user-login{
+		display:none;
+	}
+}
+.xoo-aff-group{
+	float:unset;
+	width:100%;
+}
+.xoo-el-header{
+	padding:0 0 20px;
+}
+.xoo-el-section{
+	padding-left:unset;
+}
+.xoo-el-form-container button.button.btn.xoo-el-action-btn{
+	width:100%;
+}
+.xoo-aff-group.onehalf{
+	float:right;
+	margin-right:unset;
+}
+.xoo_el_reg_fname_cont{
+	margin-left:40px;
+}
+@media only screen and (max-width:450px){
+	.xoo-aff-group.onehalf{
+		width:100%;
+	}
+}
+.ajax-product-search-results{
+	box-shadow:unset;
+	-webkit-box-shadow:unset;
+}
+.error-area{
+	z-index:unset;
+}
+.education-img-2 img, .education-img-4 img{
+	box-shadow:0 0 20px #cdcfd5;
+	border-radius:4px;
+}
+.education-img-3 img{
+	box-shadow:0 0 74px #cdcfd578;	
+	border-radius:4px;
+}
+.education-img-wrap .education-shape-1{
+	z-index:-2;
 }

@@ -76,7 +76,7 @@ $user_id                   = get_current_user_id();
 											<a href="/product-category/perfumes" class="nav-link">العطور</a>
 										</li>
 										<li class="nav-item">
-											<a href="/product-category/fragrances" class="nav-link">ادهان العود</a>
+											<a href="/product-category/oud" class="nav-link">ادهان العود</a>
 										</li>
 										<li class="nav-item">
 											<a href="/discovery-box" class="nav-link">طقم الإستكشاف</a>
@@ -106,17 +106,21 @@ $user_id                   = get_current_user_id();
 									<i class="close-btn bx bx-x"></i>
 									<div class="search-overlay search-popup">
 										<div class='search-box'>
-											<?php get_search_form(); ?>
+											<?php //get_search_form(); ?>
+											<?php echo do_shortcode('[ajaxsearch placeholder="بحث عن" button="بحث"]'); ?>
 										</div>
 									</div>
-				</div>
+								</div>
 							</div>
 							<div class="user-login">
-									<a href="/dashboard" class="user">
+								<?php if (is_user_logged_in()) {
+									echo "<a href='/dashboard' class='user'><i class='bx bxs-user-circle'></i></a>";
+								} else { ?>
+									<a href="/my-account" class="user">
 										<i class='bx bxs-user-circle'></i>
 									</a>
-
-								</div>
+								<?php } ?>
+							</div>
 							<!-- End Other Option -->
 						</div>
 						<a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
@@ -136,10 +140,13 @@ $user_id                   = get_current_user_id();
 			<div class="others-option-for-responsive">
 				<div class="container">
 					<div class="dot-menu">
-						<a href="/dashboard" class="user">
-
-							<i class="bx bxs-user-circle"></i>
-						</a>
+					<?php if (is_user_logged_in()) {
+									echo "<a href='/dashboard' class='user'><i class='bx bxs-user-circle'></i></a>";
+								} else { ?>
+									<a href="/my-account" class="user">
+										<i class='bx bxs-user-circle'></i>
+									</a>
+								<?php } ?>
 					</div>
 				</div>
 			</div>

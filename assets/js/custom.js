@@ -12,7 +12,8 @@ jQuery(document).ready(function ($) {
     });
 
     // Nice Select JS
-    $("select").niceSelect();
+    $("select").not('.thwvs-select').niceSelect();
+    //$("select").niceSelect();
 
     // Header Sticky JS
     /*

@@ -64,7 +64,16 @@
 		 * No course found
 		 */
 		// tutor_load_template('course-none');
-		tutor_utils()->tutor_empty_state( tutor_utils()->not_found_text() );
+		//tutor_utils()->tutor_empty_state( tutor_utils()->not_found_text() );
+		echo '<div class="tutor-row tutor-gx-xl-5">
+			<div class="tutor-col-12 tutor-pagination-wrapper-replaceable" tutor-course-list-contaiِner="">
+					<div class="tutor-empty-state td-empty-state tutor-p-32 tutor-text-center">
+			<img src="https://drops.dreamhosters.com/wp-content/plugins/tutor/assets/images/emptystate.svg" alt="لا توجد بيانات في الوقت الحالي" width="85%">
+			<div class="tutor-fs-6 tutor-color-secondary tutor-text-center">
+				لا يوجد دورات جديدة			</div>
+		</div>
+				</div>
+		</div>';
 	}
 
 	do_action( 'tutor_course/archive/after_loop' );

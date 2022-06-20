@@ -201,3 +201,9 @@ function bbloomer_show_cats_again_single_product()
     <hr>
 <?php
 }
+
+add_action('wp_logout','tutor_redirect_after_logout');
+function tutor_redirect_after_logout(){
+	wp_redirect( get_site_url() .'/my-account' );
+	exit();
+}
