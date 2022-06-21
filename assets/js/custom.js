@@ -13,31 +13,7 @@ jQuery(document).ready(function ($) {
 
     // Nice Select JS
     $("select").not('.thwvs-select').niceSelect();
-    //$("select").niceSelect();
-
-    // Header Sticky JS
-    /*
-    $(window).on("scroll", function () {
-      if ($(this).scrollTop() > 150) {
-        $(".navbar-area").addClass("is-sticky");
-      } else {
-        $(".navbar-area").removeClass("is-sticky");
-      }
-    });*/
-
-    // Feedback Wrap JS
-    /*
-    $(".feedback-slider").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      items: 1,
-      dots: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      autoplayHoverPause: true,
-      rtl: true,
-    });*/
+    
 
     // Go To Top JS
     // Scroll Event

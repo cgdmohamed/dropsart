@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying single course
  *
@@ -12,7 +13,7 @@
  */
 
 // Prepare the nav items
-$course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()->course_nav_items(), get_the_ID() );
+$course_nav_item = apply_filters('tutor_course/single/nav_items', tutor_utils()->course_nav_items(), get_the_ID());
 
 tutor_utils()->tutor_custom_header();
 do_action('tutor_course/single/before/wrap');
@@ -21,43 +22,43 @@ do_action('tutor_course/single/before/wrap');
 <div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent pt-5'); ?>>
 
     <div class="tutor-course-details-page tutor-container">
-    <div class="breadcrumbs rounded px-3 pt-2 pb-0.5 mb-1"><?php custom_breadcrumbs(); ?></div>
+        <div class="breadcrumbs rounded px-3 pt-2 pb-0.5 mb-1"><?php custom_breadcrumbs(); ?></div>
         <?php (isset($is_enrolled) && $is_enrolled) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
         <div class="tutor-row tutor-gx-xl-5">
             <main class="tutor-col-xl-8">
                 <?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
-	            <?php do_action('tutor_course/single/before/inner-wrap'); ?>
+                <?php do_action('tutor_course/single/before/inner-wrap'); ?>
                 <div class="tutor-course-details-tab tutor-mt-32">
                     <div class="">
-                        <?php tutor_load_template( 'single.course.enrolled.nav', array('course_nav_item' => $course_nav_item ) ); ?>
+                        <?php tutor_load_template('single.course.enrolled.nav', array('course_nav_item' => $course_nav_item)); ?>
                     </div>
                     <div class="tutor-tab tutor-pt-24">
-                        <?php foreach( $course_nav_item as $key => $subpage ) : ?>
+                        <?php foreach ($course_nav_item as $key => $subpage) : ?>
                             <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'info' ? ' is-active' : ''; ?>">
                                 <?php
-                                    do_action( 'tutor_course/single/tab/'.$key.'/before' );
-                                    
-                                    $method = $subpage['method'];
-                                    if ( is_string($method) ) {
-                                        $method();
-                                    } else {
-                                        $_object = $method[0];
-                                        $_method = $method[1];
-                                        $_object->$_method(get_the_ID());
-                                    }
+                                do_action('tutor_course/single/tab/' . $key . '/before');
 
-                                    do_action( 'tutor_course/single/tab/'.$key.'/after' );
+                                $method = $subpage['method'];
+                                if (is_string($method)) {
+                                    $method();
+                                } else {
+                                    $_object = $method[0];
+                                    $_method = $method[1];
+                                    $_object->$_method(get_the_ID());
+                                }
+
+                                do_action('tutor_course/single/tab/' . $key . '/after');
                                 ?>
                             </div>
                         <?php endforeach; ?>
                         <div class="tutor-pt-24 tutor-pb-24">
-                <?php foreach( $course_nav_item as $key => $subpage ) : ?>
-                            <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'curriculum' ? ' is-active' : ''; ?>">
-                                <?php
-                                    do_action( 'tutor_course/single/tab/'.$key.'/before' );
-                                    
+                            <?php foreach ($course_nav_item as $key => $subpage) : ?>
+                                <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'curriculum' ? ' is-active' : ''; ?>">
+                                    <?php
+                                    do_action('tutor_course/single/tab/' . $key . '/before');
+
                                     $method = $subpage['method'];
-                                    if ( is_string($method) ) {
+                                    if (is_string($method)) {
                                         $method();
                                     } else {
                                         $_object = $method[0];
@@ -65,16 +66,16 @@ do_action('tutor_course/single/before/wrap');
                                         $_object->$_method(get_the_ID());
                                     }
 
-                                    do_action( 'tutor_course/single/tab/'.$key.'/after' );
-                                ?>
-                            </div>
-                        <?php endforeach; ?>
-                </div>
-                        
+                                    do_action('tutor_course/single/tab/' . $key . '/after');
+                                    ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
                     </div>
-                    
+
                 </div>
-	            <?php do_action('tutor_course/single/after/inner-wrap'); ?>
+                <?php do_action('tutor_course/single/after/inner-wrap'); ?>
 
             </main>
 

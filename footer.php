@@ -24,7 +24,7 @@ get_template_part('template-parts/main/footer-cta');
 							<a href="/shop">المنتجات</a>
 						</li>
 						<li>
-							<a href="/about-us">عنا</a>
+							<a href="/about-us">عن المدرب والشركة</a>
 						</li>
 						<li>
 							<a href="/contact">تواصل معنا</a>
@@ -80,7 +80,7 @@ get_template_part('template-parts/main/footer-cta');
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-sm-6 text-center">
+			<div class="col-lg-3 col-sm-6 text-center partners">
 				<img src="<?php echo $theme_path; ?>/assets/img/tpf.png" alt="IPF Logo">
 				<img src="<?php echo $theme_path; ?>/assets/img/new-luxury.png" alt="IPF Logo2">
 				<div class="d-flex justify-content-center ipf-btn">

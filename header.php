@@ -106,7 +106,6 @@ $user_id                   = get_current_user_id();
 									<i class="close-btn bx bx-x"></i>
 									<div class="search-overlay search-popup">
 										<div class='search-box'>
-											<?php //get_search_form(); ?>
 											<?php echo do_shortcode('[ajaxsearch placeholder="بحث عن" button="بحث"]'); ?>
 										</div>
 									</div>
@@ -140,13 +139,13 @@ $user_id                   = get_current_user_id();
 			<div class="others-option-for-responsive">
 				<div class="container">
 					<div class="dot-menu">
-					<?php if (is_user_logged_in()) {
-									echo "<a href='/dashboard' class='user'><i class='bx bxs-user-circle'></i></a>";
-								} else { ?>
-									<a href="/my-account" class="user">
-										<i class='bx bxs-user-circle'></i>
-									</a>
-								<?php } ?>
+						<?php if (is_user_logged_in()) {
+							echo "<a href='/dashboard' class='user'><i class='bx bxs-user-circle'></i></a>";
+						} else { ?>
+							<a href="/my-account" class="user">
+								<i class='bx bxs-user-circle'></i>
+							</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
