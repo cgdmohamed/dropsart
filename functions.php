@@ -5,9 +5,9 @@
  */
 
 //performance
-require_once get_template_directory() . '/inc/class-preformance.php';
+//require_once get_template_directory() . '/inc/class-preformance.php';
 require_once get_template_directory() . '/inc/class-breadcrumbs.php';
-require_once get_template_directory() . '/inc/class-testmonials.php';
+//require_once get_template_directory() . '/inc/class-testmonials.php';
 
 function dropsart_theme_support()
 {
@@ -36,7 +36,7 @@ function dropsart_theme_support()
         )
     );
 
-    load_theme_textdomain('drops-art');
+    load_theme_textdomain('dropsart');
     /*
 	 * Adds `async` and `defer` support for scripts registered or enqueued
 	 * by the theme.
