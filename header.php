@@ -44,19 +44,7 @@ $user_id                   = get_current_user_id();
 								</li>
 
 								<li class="nav-item">
-									<a href="#" class="nav-link">
-										الدورات
-										<i class="bx bx-chevron-down"></i>
-									</a>
-
-									<ul class="dropdown-menu">
-										<li class="nav-item">
-											<a href="/course-category/recorded/" class="nav-link">الدورات المسجلة</a>
-										</li>
-										<li class="nav-item">
-											<a href="/course-category/live-courses/" class="nav-link">الدورات المباشرة</a>
-										</li>
-									</ul>
+									<a href="/course-category/live-courses/" class="nav-link">الدورات المباشرة</a>
 								</li>
 
 								<li class="nav-item">
@@ -106,7 +94,7 @@ $user_id                   = get_current_user_id();
 									<i class="close-btn bx bx-x"></i>
 									<div class="search-overlay search-popup">
 										<div class='search-box'>
-											<?php echo do_shortcode('[ajaxsearch placeholder="بحث عن" button="بحث"]'); ?>
+											<?php echo do_shortcode('[fibosearch]'); ?>
 										</div>
 									</div>
 								</div>
@@ -125,7 +113,7 @@ $user_id                   = get_current_user_id();
 						<a class="navbar-brand" href="<?php echo esc_html(get_site_url()); ?>">
 							<?php
 							if (has_custom_logo()) {
-								echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+								echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="mobile-class">';
 							} else {
 								echo '<h1>' . get_bloginfo('name') . '</h1>';
 							}

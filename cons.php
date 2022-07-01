@@ -8,7 +8,7 @@ get_header();
 
 <div class="container">
     <div class="row py-5">
-        <h1 class="text-center"><?php the_title(); ?></h1>
+        <h1 class="text-center mt-5"><?php the_title(); ?></h1>
             <div>
                 <?php the_content(); ?>
             </div>

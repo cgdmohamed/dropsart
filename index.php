@@ -26,11 +26,8 @@ if (is_front_page()) {
 								<h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">دورة تصميم وصناعة العطور</h1>
 								<p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">من هو مصمم العطور ؟ وماهي الادوات التي يحتاجها مصمم العطور؟</p>
 
-								<a href="/shop" class="default-btn wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
-									المتجر
-								</a>
-								<a href="/blog" class="default-btn alt-btn mr-2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
-									المدونة
+								<a href="/courses/%d8%af%d9%88%d8%b1%d8%a9-%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d9%88%d8%b5%d9%86%d8%a7%d8%b9%d8%a9-%d8%a7%d9%84%d8%b9%d8%b7%d9%88%d8%b1/" class="default-btn wow animate__animated animate__fadeInLeft" data-wow-delay="0.9s">
+									المزيد عن الدورة
 								</a>
 							</div>
 						</div>

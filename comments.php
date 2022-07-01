@@ -38,18 +38,18 @@
 
     <?php
 
-    comment_form(
+        comment_form(
         array(
-            'title_reply' => esc_html__('Leave a comment', 'dropsart'),
+            'title_reply' => esc_html__('إترك تعليقاً', 'dropsart'),
             'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
             'title_reply_after' => '</h2>',
             'class_submit' => 'submit default-btn page-btn',
             'comment_notes_before' => '',
             'fields' => array(
-                'author' => '<input id="author" class="form-control" id="name" name="author" type="text" value="" placeholder="اسمك" required="required">',
-                'email' => '<div class="col-lg-6 col-sm-6"><div class="form-group"><input type="email" id="email" class="form-control" name="email"></div></div>',
+                'author' => '<div class="col-lg-12 col-md-12 mb-4"><div class="form-group"><input id="author" class="form-control" id="name" name="author" type="text" value="" placeholder="اسمك" required="required"></div></div>',
+                'email' => '<div class="col-lg-12 col-md-12 mb-4"><div class="form-group"><input type="email" id="email" placeholder="بريدك الإلكتروني" class="form-control" name="email"></div></div>',
                 'cookies' => '<div class="user-cookies"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
-<label for="wp-comment-cookies-consent">' . __('Save my name, email, and website in this browser for the next time I comment.', 'dropsart') . '</label></div>'
+<label for="wp-comment-cookies-consent">' . __('احفظ بياناتي للتعليق مرة اخرى', 'dropsart') . '</label></div>'
             ),
             'comment_field' => '<div class="col-lg-12 col-md-12 mb-4"><div class="form-group"><textarea name="comment" id="comment" required="required" class="form-control" rows="8"></textarea></div></div>
             '

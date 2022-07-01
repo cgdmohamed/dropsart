@@ -9,7 +9,7 @@ $author_id = $post->post_author;
 			<div class="col-lg-12">
 				<div class="single-blog-content">
 					<div class="blog-top-content">
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail('large'); ?>
 
 						<span class="tag">
 							<?php echo get_the_category_list(); ?></span>
@@ -17,12 +17,9 @@ $author_id = $post->post_author;
 						<h3><?php the_title(); ?></h3>
 
 						<ul class="post-details">
-							<li>بواسطة <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo get_the_author_meta('display_name', $author_id); ?></a></li>
+							<li>بواسطة <?php echo get_the_author_meta('display_name', $author_id); ?></li>
 							<li>
 								<?php the_date('j F Y'); ?>
-							</li>
-							<li>
-								<a href="#">2 Comments</a>
 							</li>
 						</ul>
 

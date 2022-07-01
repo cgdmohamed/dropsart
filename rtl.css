@@ -30,7 +30,9 @@ body {
   right: unset;
   left: 0;
 }
-
+.navbar-brand img{
+	height:50px;
+}
 .navbar-area .others-option .cart-icon {
   margin-right: 0;
   margin-left: 30px;
@@ -523,12 +525,17 @@ body {
 [type="url"] {
   direction: unset;
 }
-
+.blog-top-content img{
+	width:100%;
+}
 @media only screen and (max-width: 767px) {
   .single-event .event-content {
     padding-left: 0;
     padding-right: 0;
   }
+	.mobile-nav img{
+		height:45px;
+	}
   .news-area .col-lg-4.col-sm-4.pr-0 {
     padding-right: 15px !important;
     padding-left: 15px !important;
@@ -735,8 +742,8 @@ body {
 .course-card {
   background-image: url(../dropsart/assets/img/cats/shape2.png);
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 15%;
+  background-position: -100px center;
+  background-size: 25%;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .course-card {
@@ -785,8 +792,11 @@ body {
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .dropsart-footer {
-    background-position: -155px bottom;
+    background-position: -230px bottom;
     background-size: 100%;
+  }
+  .education-img-3{
+    display: none;
   }
 }
 .footer-widget h3,
@@ -820,7 +830,23 @@ body {
 .course-users {
   width: 25%;
 }
+.tutor-user-public-profile.tutor-user-public-profile-no-cp .tutor-social-container{
+	right:auto;
+	left:36px;
+}
+.tutor-user-public-profile .tutor-user-profile-content{
+	margin-top:110px;
+}
+.tutor-user-public-profile .tutor-user-profile-content p{
+	background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
 @media (min-width: 320px) and (max-width: 480px) {
+	.tutor-user-public-profile .tutor-user-profile-content{
+		margin-top:0;
+	}
   .course-users {
     width: 45%;
   }
@@ -951,6 +977,7 @@ table.tutor-table thead th * > * {
 /****************/
 /* woocommmerce */
 /****************/
+.quantity, .buttons_added { width:0; height:0; display: none; visibility: hidden; }
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 1rem;
@@ -1203,6 +1230,12 @@ div.woocommerce form .form-row textarea:focus {
   left:15px;
   right: auto;
 }
+.partners img{
+  max-width: 40%;
+}
+.partners img:nth-child(2){
+  max-width: 20%;
+}
 @media only screen and (max-width: 991px){
   .others-option-for-responsive .dot-menu{
     left: unset;
@@ -1212,7 +1245,7 @@ div.woocommerce form .form-row textarea:focus {
     margin-top: 2rem;
   }
   .tutor-wrap{
-    padding-top: 7rem;
+    padding-top: 7rem !important;
   }
   .woocommerce-page > .container h1{
     margin-top: 7rem;
@@ -1223,4 +1256,40 @@ div.woocommerce form .form-row textarea:focus {
   .partners img{
     max-width: 40%;
   }
+}
+.fc-checkout-header__inner{
+	flex-direction:row-reverse;
+}
+.fc-checkout__cart-link-wrapper{
+	left:unset !important;
+	right:10px;
+}
+
+.comment-content{
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #dcdcde;
+}
+.comment-reply-link{
+  color: var(--main-color);
+  float: left;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  padding: 12px 30px;
+  clear: both;
+  margin-top: 10px;
+}
+.comment-body{
+  margin: 1rem;
+}
+.comment-edit-link{
+  color: var(--main-color);
+}
+.comment-metadata{
+  opacity: 0.5;
+  margin: 12px 0;
+}
+.tutor-user-public-profile .photo-area .pp-area .tutor-social-container a{
+  font-size: 24px;
 }

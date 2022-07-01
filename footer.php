@@ -82,7 +82,8 @@ get_template_part('template-parts/main/footer-cta');
 
 			<div class="col-lg-3 col-sm-6 text-center partners">
 				<img src="<?php echo $theme_path; ?>/assets/img/tpf.png" alt="IPF Logo">
-				<img src="<?php echo $theme_path; ?>/assets/img/new-luxury.png" alt="IPF Logo2">
+				<br>
+				<img src="<?php echo $theme_path; ?>/assets/img/new-luxury.png" alt="IPF Logo2" class="pt-2">
 				<div class="d-flex justify-content-center ipf-btn">
 					<a href="https://www.perfumefoundation.org/index.html" nofollow class="default-btn mt-5">مزيد عن IPF</a>
 				</div>
@@ -95,7 +96,7 @@ get_template_part('template-parts/main/footer-cta');
 				<p>
 					شركة Drops Art للتدريب
 					<br>
-					المعتمدة كجهة تدريب رسمياً للشرق الاوسط من
+					المعتمدة كجهة تدريب رسمياً من
 					<br>
 					The International Perfume Foundation IPF
 				</p>

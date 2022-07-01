@@ -121,12 +121,19 @@ add_action('after_setup_theme', 'wpdocs_setup_theme');
 function dropsart_custom_logo_setup()
 {
     $defaults = array(
-        'height'               => 49,
+        /*'height'               => 49,
         'width'                => 167,
         'flex-height'          => true,
         'flex-width'           => true,
         'header-text'          => array('site-title', 'site-description'),
-        'unlink-homepage-logo' => true,
+        'unlink-homepage-logo' => true,*/
+		
+	'flex-width'    => true,
+	'width'           => 89,
+	'flex-height'    => true,
+	'height'          => 50,
+	'header-selector' => '.site-title a',
+	'header-text'     => false
     );
 
     add_theme_support('custom-logo', $defaults);
@@ -206,4 +213,61 @@ add_action('wp_logout','tutor_redirect_after_logout');
 function tutor_redirect_after_logout(){
 	wp_redirect( get_site_url() .'/my-account' );
 	exit();
+}
+
+/**
+ * 
+ * Discovery Box Hidden
+ *  
+ * */
+  
+add_action( 'woocommerce_product_query', 'bbloomer_hide_products_category_shop' );
+   
+function bbloomer_hide_products_category_shop( $q ) {
+  
+    $tax_query = (array) $q->get( 'tax_query' );
+  
+    $tax_query[] = array(
+           'taxonomy' => 'product_cat',
+           'field' => 'slug',
+           'terms' => array( 'uncategorized' ), // Category slug here
+           'operator' => 'NOT IN'
+    );
+  
+  
+    $q->set( 'tax_query', $tax_query );
+  
+}
+
+add_action( 'add_meta_boxes_product', 'bbloomer_remove_metaboxes_edit_product', 9999 );
+ 
+function bbloomer_remove_metaboxes_edit_product() {
+ 
+   // e.g. remove short description
+   remove_meta_box( 'postexcerpt', 'product', 'normal' );
+ 
+   // e.g. remove product tags
+   remove_meta_box( 'tagsdiv-product_tag', 'product', 'side' );
+ 
+}
+
+function remove_product_description_add_cart_button(){
+    global $product;
+    $category = 'discovery';
+    
+    if ( has_term( $category, 'product_cat', $product->id ) )
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+
+}
+//add_action('wp','remove_product_description_add_cart_button');
+// Remove Author archives
+add_action('template_redirect', 'jltwp_adminify_remove_archives_author');
+function jltwp_adminify_remove_archives_author()
+{
+    if (is_author()){
+        $target = get_option('siteurl');
+        $status = '301';
+        wp_redirect($target, 301);
+        die();
+    }
 }
